@@ -1,0 +1,45 @@
+pwd 																: bulundugun dizini gösterir.
+ls																	: dizindeki dosyalari listeler.
+ls -a																: dizindeki gizli	dosyalari listeler.
+cd <dosyaAdi>												: dizinde belirtilen dosyanin içine girer.
+cd ..																: bir önceki dizine döner.
+clear																: terminal'i temizler (alternatif CTRL+L).	
+gedit <dosyaAdi>											: belirtilen dosyayi ekranda açar.
+
+git gonfig --global user.name "kullaniciAdi"		: git'te kullanici adi olusturur. Dogrulama için "" içini yazmadan kontrol edebilirsin.
+git config --global user.email "emailAdresi"		: git'te email olusturur. Dogrulama için "" içini yazmadan kontrol edebilirsin.
+git init															: git projesi olusturur. Belirtilen dizini yükler.
+git add .														: dizindeki dosyalari git reposu geçis bölgesine yükler.
+git add <dosyaAdi>										: belirtilen tekli dosyayi git reposu geçis bölgesine yükler.
+git add .m "<msj>"										: dizindeki geçis bölgesine eklenmis dosyalari "" içine versiyon mesaji yazarak yükler.
+git log															: alinan versiyonlari listeler.
+git status														: repoda ki degisiklikleri gösterir. Ayrica terminal rehberidir.
+git diff															: dosyada ki satir degisikliklerini gösterir.
+git diff <dosyaAdi>										: belirtilen dosyada ki satir degisikliklerini gösterir.
+git dif --staged												: geçis bölgesiyle git reposu arasindaki farkllari gösterir.
+git rm															: dizinde silinen dosyanin geçis bölgesine gönderir.
+git rm <dosyaAdi>											: dizinde silinen belirtilmis dosyayi  geçis bölgesine gönderir.
+git rm -r <klasörAdi\>									: dizinde belirtilen klasörünün silinip geçis bölgesine gönderir.
+git mv <mevcutDosyaAdi> <yeniDosyaAdi>	: seçilen dosyanin adini degistirir.
+git mv <dosyaAdi> <klasörAdi\>					: seçilen dosyayi belirtilen klasöre tasir.
+git checkout -- <dosyaAdi>								: belirtilen dosyayi önceki versiyona geri alir.
+git reset HEAD <dosyaAdi>								: geçis bölgesine gönderilmis dosyayi geri alir. degisiklikleri iptal eder.
+git checkout <commitID> -- . 							: dizini belirtilen versiyona geri çevirir.
+git checkout <commitID> -- <dosyaAdi> 		: belirtilen dosyayi belirtilen versiyona geri çevirir.
+git branch														: gitte ki mevcut dallari listeler
+git branch -- all 												: remote'da ki dallari da listeler.
+git branch <branchAdi> 									: git'te yeni bir dal olusturur.
+git checkout <branchAdi>								: belirtilen branch'e geçis yapar.
+git diff master <branchAdi> 							: dallar arasinda ki farklari gösterir.
+git merge <branchAdi> 									: dallari birlestirir.
+
+git remote add <baglantiAdi> <gitRepoURL>	: github reposunu dizine ekler.
+git remote 													: ekli baglantilari gösterir.
+git push -u <baglantiAdi> master					: github reposuna master versiyon olarak dizindeki herseyi gönderir.
+git push -u <baglantiAdi> <branchAdi>			: github reposuna belirtilen dalin versiyonlarini gönderir.
+git pull 															: github'daki degisiklikleri yerel dizine çeker.
+cat >> .gitignore [enter]	 <dosyaAdi>				: dizinde git tarafindan takip edilmeyecek gizli dosya olusturur. enter sonrasi buraya eklenecek dosyayi gönderir. CTRL+C ile dosya ekleme kapatilir.
+cat .gitignore													: ignore dosyasindaki kayitlari gösterir.
+
+.gitignore; <klasörAdi\>/*								: belirtilen klasördeki tüm dosyalari gitignore'a ekler.
+.gitignore; !<klasörAdi\>/<dosyaAdi> 			: belirtilen dosyayi gitignore'dan çikarir.
